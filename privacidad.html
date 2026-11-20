@@ -20,38 +20,47 @@
 <main>
   <div class="card">
     <h1>Política de privacidad de Clips</h1>
-    <p class="muted">Última actualización: 18 de noviembre de 2026</p>
+    <p class="muted">Última actualización: 19 de noviembre de 2026</p>
 
     <h2>Qué es Clips</h2>
     <p>Clips es una herramienta privada que usa únicamente el propietario del canal de YouTube
-      <a href="https://www.youtube.com/@your-clips-c3h">Your Clips</a> para publicar clips cortos en ese canal.
+      <a href="https://www.youtube.com/@your-clips-c3h">Your Clips</a> y en su cuenta de TikTok, para publicar clips cortos en ellos.
       No es un servicio abierto al público.</p>
 
     <h2>Datos a los que accede</h2>
     <ul>
       <li>Mediante la API de YouTube, Clips solicita un único permiso: <b>subir vídeos al canal del propio usuario</b>
         (<code>youtube.upload</code>).</li>
-      <li>No lee, modifica ni borra otros datos de la cuenta de Google o de YouTube, ni accede a correos, contactos o archivos.</li>
+      <li>Mediante la API de TikTok (Login Kit y Content Posting API), Clips solicita: <b>información básica del perfil</b>
+        (<code>user.info.basic</code>: nombre visible y avatar, para mostrar en qué cuenta se publica) y <b>publicar vídeos en la cuenta
+        del propio usuario</b> (<code>video.publish</code>).</li>
+      <li>No lee, modifica ni borra otros datos de las cuentas de Google, YouTube o TikTok, ni accede a mensajes, seguidores, contactos o archivos.</li>
     </ul>
 
     <h2>Cómo se guardan y usan</h2>
     <ul>
       <li>La autorización de Google (token de acceso) se guarda únicamente en el servidor privado del propietario del canal,
         y solo se usa para subir los clips que él aprueba.</li>
+      <li>La autorización de TikTok (tokens de acceso y de renovación) se guarda del mismo modo, en ese servidor privado, y solo se usa
+        para publicar los clips que el propietario revisa y aprueba uno a uno. Antes de cada publicación, el propietario elige la
+        privacidad y los ajustes del vídeo.</li>
+      <li>Los datos del perfil de TikTok no se almacenan más allá de lo necesario para mostrar la cuenta conectada.</li>
       <li>No se venden, comparten ni ceden datos a terceros, ni se usan con fines publicitarios.</li>
       <li>El uso de la información recibida de las API de Google cumple la
         <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de las API de Google</a>,
-        incluidos los requisitos de uso limitado.</li>
+        incluidos los requisitos de uso limitado, y las <a href="https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en">Condiciones para desarrolladores de TikTok</a>.</li>
     </ul>
 
     <h2>Cómo revocar el acceso</h2>
     <p>El acceso puede retirarse en cualquier momento desde
-      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
-      Al hacerlo, el token deja de funcionar y se elimina del servidor.</p>
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+      (Google) o desde los ajustes de TikTok (<i>Ajustes y privacidad → Seguridad → Apps y servicios</i>).
+      Al hacerlo, el token deja de funcionar y se elimina del servidor. También puedes pedir el borrado de cualquier dato escribiendo al contacto de abajo;
+      se atiende en un máximo de 30 días.</p>
 
     <h2>Contacto</h2>
     <p><a href="mailto:marcfdez10@gmail.com">marcfdez10@gmail.com</a></p>
-    <p><a href="./">Volver al inicio</a></p>
+    <p><a href="terminos.html">Condiciones de uso</a> · <a href="./">Volver al inicio</a></p>
   </div>
 </main>
 </body>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Clips · Conectando TikTok</title>
+<style>
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f6f7f9; color: #15181d; }
+  @media (prefers-color-scheme: dark) { body { background: #111317; color: #e9ebee; } }
+  main { max-width: 560px; margin: 0 auto; padding: 48px 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Conectando TikTok…</h1>
+  <p id="m">Volviendo al panel privado de Clips.</p>
+</main>
+<script>
+  // Puente de la conexión con TikTok: TikTok exige una dirección https de vuelta, y el panel de Clips es privado
+  // (red local o Tailscale). Esta página solo reenvía el código de autorización al panel indicado en «state»,
+  // y únicamente si es uno de los paneles conocidos. No guarda ni envía nada a ningún otro sitio.
+  (function () {
+    var PANELES = ['http://192.168.100.86:8790', 'http://100.88.11.124:8790', 'http://servidor:8790', 'https://servidor.tailc4e453.ts.net'];
+    var q = new URLSearchParams(location.search);
+    var state = q.get('state') || '';
+    var origen = '';
+    try { origen = atob((state.split('.')[1] || '').replace(/-/g, '+').replace(/_/g, '/')); } catch (e) {}
+    if (PANELES.indexOf(origen) === -1) { document.getElementById('m').textContent = 'Enlace no válido.'; return; }
+    location.replace(origen + '/api/tiktok/callback' + location.search);
+  })();
+</script>
+</body>
+</html>
