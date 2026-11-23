@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clips · Política de privacidad</title>
+<style>
+  :root { --bg: #f6f7f9; --panel: #fff; --text: #15181d; --muted: #5b636e; --accent: #2a78d6; --line: #e3e6ea; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111317; --panel: #181b20; --text: #e9ebee; --muted: #a2a9b2; --accent: #4a93ec; --line: #2a2e35; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
+  h1 { margin: 0 0 4px; font-size: 26px; } h2 { font-size: 18px; margin: 24px 0 6px; }
+  p, li { margin: 8px 0; } .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1>Política de privacidad de Clips</h1>
+    <p class="muted">Última actualización: 19 de noviembre de 2026</p>
+
+    <h2>Qué es Clips</h2>
+    <p>Clips es una herramienta privada que usa únicamente el propietario del canal de YouTube
+      <a href="https://www.youtube.com/@your-clips-c3h">Your Clips</a> y en su cuenta de TikTok, para publicar clips cortos en ellos.
+      No es un servicio abierto al público.</p>
+
+    <h2>Datos a los que accede</h2>
+    <ul>
+      <li>Mediante la API de YouTube, Clips solicita un único permiso: <b>subir vídeos al canal del propio usuario</b>
+        (<code>youtube.upload</code>).</li>
+      <li>Mediante la API de TikTok (Login Kit y Content Posting API), Clips solicita: <b>información básica del perfil</b>
+        (<code>user.info.basic</code>: nombre visible y avatar, para mostrar en qué cuenta se publica) y <b>publicar vídeos en la cuenta
+        del propio usuario</b> (<code>video.publish</code>).</li>
+      <li>No lee, modifica ni borra otros datos de las cuentas de Google, YouTube o TikTok, ni accede a mensajes, seguidores, contactos o archivos.</li>
+    </ul>
+
+    <h2>Cómo se guardan y usan</h2>
+    <ul>
+      <li>La autorización de Google (token de acceso) se guarda únicamente en el servidor privado del propietario del canal,
+        y solo se usa para subir los clips que él aprueba.</li>
+      <li>La autorización de TikTok (tokens de acceso y de renovación) se guarda del mismo modo, en ese servidor privado, y solo se usa
+        para publicar los clips que el propietario revisa y aprueba uno a uno. Antes de cada publicación, el propietario elige la
+        privacidad y los ajustes del vídeo.</li>
+      <li>Los datos del perfil de TikTok no se almacenan más allá de lo necesario para mostrar la cuenta conectada.</li>
+      <li>No se venden, comparten ni ceden datos a terceros, ni se usan con fines publicitarios.</li>
+      <li>El uso de la información recibida de las API de Google cumple la
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los servicios de las API de Google</a>,
+        incluidos los requisitos de uso limitado, y las <a href="https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en">Condiciones para desarrolladores de TikTok</a>.</li>
+    </ul>
+
+    <h2>Cómo revocar el acceso</h2>
+    <p>El acceso puede retirarse en cualquier momento desde
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+      (Google) o desde los ajustes de TikTok (<i>Ajustes y privacidad → Seguridad → Apps y servicios</i>).
+      Al hacerlo, el token deja de funcionar y se elimina del servidor. También puedes pedir el borrado de cualquier dato escribiendo al contacto de abajo;
+      se atiende en un máximo de 30 días.</p>
+
+    <h2>Contacto</h2>
+    <p><a href="mailto:domingoimportante60@gmail.com">domingoimportante60@gmail.com</a></p>
+    <p><a href="terminos.html">Condiciones de uso</a> · <a href="./">Volver al inicio</a></p>
+  </div>
+</main>
+</body>
+</html>
